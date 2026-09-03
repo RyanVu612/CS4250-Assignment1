@@ -4,7 +4,7 @@
 # FILENAME: index.py
 # SPECIFICATION: Inverted index of collection.csv
 # FOR: CS 4250 - Assignment #1
-# TIME SPENT: 45 minutes
+# TIME SPENT: 30 minutes
 #-------------------------------------------------------------------------
 
 # Importing Python libraries
