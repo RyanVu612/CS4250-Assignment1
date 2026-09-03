@@ -19,11 +19,14 @@ data = pd.read_csv("collection.csv")
 lemmas = {}
 lemmas["homes"] = "home"
 lemmas["increases"] = "rise"
+lemmas["increasing"] = "rise"
 lemmas["rising"] = "rise"
 lemmas["sales"] = "sale"
 
 # Creating the data structure that will store the inverted index
+# Use set in case of duplicate value in same query
 invertedIndex = defaultdict(list)
+invertedIndexSet = defaultdict(set)
 
 # Processing each document in the collection
 for i, row in data.iterrows():
@@ -47,7 +50,9 @@ for i, row in data.iterrows():
     # Building the inverted index
     # --> add your Python code here
     for word in words:
-        invertedIndex[word].append(docID)
+        if docID not in invertedIndexSet[word]:
+            invertedIndexSet[word].add(docID)
+            invertedIndex[word].append(docID)
 
 # Printing the inverted index with terms ordered alphabetically
 # Expected format:
@@ -60,4 +65,4 @@ invertedIndex = dict(sorted(invertedIndex.items()))
 
 # Print inverted index
 for key, value in invertedIndex.items():
-    print(f"{key} : {value}")
+    print(f"{key}\t: {value}")
