@@ -1,10 +1,10 @@
 
 #-------------------------------------------------------------------------
-# AUTHOR: your name
-# FILENAME: title of the source file
-# SPECIFICATION: description of the program
+# AUTHOR: Ryan Vu
+# FILENAME: index.py
+# SPECIFICATION: Inverted index of collection.csv
 # FOR: CS 4250 - Assignment #1
-# TIME SPENT: how long it took you to complete the assignment
+# TIME SPENT: 45 minutes
 #-------------------------------------------------------------------------
 
 # Importing Python libraries
